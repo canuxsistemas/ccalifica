@@ -1,0 +1,11 @@
+# docker-compose run app rails new . --force --database=sqlserver
+version: "3.7"
+services:
+  app:
+    container_name: califica
+    build: 
+      context: .
+    volumes: 
+      - .:/califica
+    ports: 
+      - "3000:3000"
